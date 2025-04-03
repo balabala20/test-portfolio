@@ -386,7 +386,7 @@ function Projects() {
   );
 }
 
-const base_url =`http://localhost:5000`;
+const base_url =`https://test-portfolio-qp55.onrender.com`;
 
 function Contact() {
   const [name, setName] = useState("");
@@ -428,6 +428,9 @@ function Contact() {
       }
     } catch (error) {
       setFeedback("An error occurred. Please try again later.");
+      setTimeout(() => {
+          setFeedback("");
+        }, 2000);
     }
   };
 
