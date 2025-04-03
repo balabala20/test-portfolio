@@ -291,7 +291,7 @@ function Contact() {
 
     try {
       const user = { name, email, message }; // Define user object here
-      const response = await fetch(`${base_url}/api/users/add-user`, {
+      const response = await fetch(`${base_url}/users/add-user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // Fixed typo
