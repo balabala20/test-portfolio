@@ -16,7 +16,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 dotEnv.config();
-const db = process.env.mongoose_uri;
+const db = "mongodb+srv://balasiva:Bala2003@cluster0.wdbqi9i.mongodb.net/PortfolioWebsite";
 
 mongoose
   .connect(db)
