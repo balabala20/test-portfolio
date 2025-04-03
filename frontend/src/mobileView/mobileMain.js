@@ -272,7 +272,7 @@ function Projects() {
   return projects;
 
 }
-const base_url = `https://5000`;
+const base_url = `https://test-portfolio-qp55.onrender.com`;
 
 function Contact() {
   const [name, setName] = useState("");
