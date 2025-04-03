@@ -428,6 +428,9 @@ function Contact() {
       }
     } catch (error) {
       setFeedback("An error occurred. Please try again later.");
+      setTimeout(() => {
+          setFeedback("");
+        }, 2000);
     }
   };
 
