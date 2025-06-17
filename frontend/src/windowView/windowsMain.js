@@ -27,6 +27,7 @@ import coding_photo from "../img/coading.png";
 import profile_photo from "../img/photo.jpg";
 import plcScadaCertificate from "../img/plc-scada-certificate.jpg";
 import project1 from "../img/project1.png";
+import project2 from "../img/project2.jpg";
 import { Link } from "react-router-dom";
 
 function Profile() {
@@ -376,10 +377,21 @@ function Projects() {
       <div id="projects_set">
         <div className="projects">
           <h3>Portfolio Website</h3>
-          <Link to="">
+          <Link to="https://test-portfolio-qp55.onrender.com">
             <img src={project1} alt="img" />
           </Link>
-          <p>Technologies used: React,Express,MongoDB</p>
+          <p>Technologies used: React,Express,MongoDB
+            Check it out: click on it
+          </p>
+        </div>
+        <div className="projects">
+          <h3>Calculator</h3>
+          <Link to="https://calculator-app-rosy-iota.vercel.app/">
+            <img src={project2} alt="img" />
+          </Link>
+          <p>Technologies used: React <br/>
+            Check it out: click on it
+          </p>
         </div>
       </div>
     </div>

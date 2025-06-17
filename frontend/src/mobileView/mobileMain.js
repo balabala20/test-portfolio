@@ -3,6 +3,7 @@ import profile_photo from "../img/photo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import plcScadaCertificate from "../img/plc-scada-certificate.jpg";
 import project1 from "../img/project1.png";
+import project2 from "../img/project2.jpg";
 import { Link } from "react-router-dom";
 import {
   faLinkedin,
@@ -15,7 +16,6 @@ import {
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-
 
 function Profile() {
   let profile = (
@@ -113,7 +113,7 @@ function About() {
       </div>
       <div id="mobile_about_text">
         <p>
-        As an Electrical and Electronics Engineering student with a passion
+          As an Electrical and Electronics Engineering student with a passion
           for coding and web development, I'm excited to share my projects and
           experiences with you. With a strong foundation in electronics and a
           growing expertise in full-stack development, I'm always looking for
@@ -259,18 +259,30 @@ function Projects() {
         <h2>Projects</h2>
       </div>
       <div id="project_set">
-        <div className="project">
+        <div className="mobile-projects">
           <h3>Portfolio Website</h3>
-          <Link to="">
+          <Link to="https://test-portfolio-qp55.onrender.com">
             <img src={project1} alt="img" />
           </Link>
-          <p>Technologies used: React,Express,MongoDB</p>
+          <p>
+            Technologies used: React,Express,MongoDB. <br/>
+             Check it out: click on it
+          </p>
+        </div>
+        <div className="mobile-projects">
+          <h3>Calculator</h3>
+          <Link to="https://calculator-app-rosy-iota.vercel.app/">
+            <img src={project2} alt="img" />
+          </Link>
+          <p>
+            Technologies used: React. <br />
+            Check it out: click on it
+          </p>
         </div>
       </div>
     </div>
   );
   return projects;
-
 }
 const base_url = `https://test-portfolio-qp55.onrender.com`;
 
@@ -301,11 +313,20 @@ function Contact() {
 
       if (response.ok) {
         setFeedback("User added successfully!");
+        setTimeout(() => {
+          setFeedback("");
+        }, 2000);
       } else {
-        setFeedback("Email is already contact us, Check your email");
+        setFeedback("this user is already contact us");
+        setTimeout(() => {
+          setFeedback("");
+        }, 2000);
       }
     } catch (error) {
       setFeedback("An error occurred. Please try again later.");
+      setTimeout(() => {
+        setFeedback("");
+      }, 2000);
     }
   };
 
